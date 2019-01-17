@@ -32,7 +32,7 @@ tags:
 ![效果示意图](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-001/sample.png)
 
 ### 3. 使用方法
-1. 若要引入新角色（人物或者物品），则将其图案放在默认为 **Resources/Images/NPC** 文件夹内，并且请在 **NPCEnumMgr** 添加属于该角色的 **NPC_TYPE** 枚举，并且注意该枚举类型名即该角色的名称，图案和文本都要使用此处枚举的名字，否则会出错。
+1. 若要引入新角色（人物或者物品），则将其图案放在默认为 `Resources/Images/NPC` 文件夹内，并且请在 `NPCEnumMgr` 添加属于该角色的 `NPC_TYPE` 枚举，并且注意该枚举类型名即该角色的名称，图案和文本都要使用此处枚举的名字，否则会出错。
 ![放置图案](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-001/sample_img.png)  
 放置枚举示例：  
 ```csharp
@@ -43,10 +43,10 @@ public enum NPC_TYPE
 }
 ```
 
-2. 若要添加新剧情，请在 **Resources/Text/Dialogue/** 路径下进行添加XML文件，在 **Dialogs/Dialog** 的 **name** 结点内添加该角色的名称，也就是之前所说的添加的那个枚举。在 **Dialogs/Dialog** 的 **info** 结点内添加他说的话的文本，注意不要过长。  
+2. 若要添加新剧情，请在 `Resources/Text/Dialogue/` 路径下进行添加XML文件，在 `Dialogs/Dialog` 的 `name` 结点内添加该角色的名称，也就是之前所说的添加的那个枚举。在 `Dialogs/Dialog` 的 `info` 结点内添加他说的话的文本，注意不要过长。  
 ![添加XML文件](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-001/sample_text.png)  
 XML文件内容示例：  
-```xml
+```xml  
 <?xml version="1.0" encoding="utf-8"?>
 <Dialogs>
   <Dialog>
@@ -58,19 +58,19 @@ XML文件内容示例：
     <info>怎么样？怕不怕？</info>
   </Dialog>
 </Dialogs>
-```
+```  
 
-3. 在你要写的NPC的类里添加一个 **Dialogue** 变量，并且将此处对白对应的相对 **Resources/Text/Dialogue/**  的路径赋值给这个变量的 **event_name** 成员。
+3. 在你要写的NPC的类里添加一个 `Dialogue` 变量，并且将此处对白对应的相对 `Resources/Text/Dialogue/`  的路径赋值给这个变量的 `event_name` 成员。
 
-4. 在你会触发对白逻辑的物体上挂载 **DialogueTrigger** 脚本，并且将此处对白对应的相对 **Resources/Text/Dialogue/**  的路径赋值给这个脚本变量的 **Dialogue.event_name** 成员。触发对白时调用其 **TriggerDialogue** 方法即可。
+4. 在你会触发对白逻辑的物体上挂载 `DialogueTrigger` 脚本，并且将此处对白对应的相对 `Resources/Text/Dialogue/`  的路径赋值给这个脚本变量的 `Dialogue.event_name` 成员。触发对白时调用其 `TriggerDialogue` 方法即可。
 
-5. 建议使用 **CLX Toolkit/Super Dialogue/Prefab/** 内的 **Super Dialogue Canvas** 预制体作为UI界面进行更改使用。
+5. 建议使用 `CLX Toolkit/Super Dialogue/Prefab/` 内的 `Super Dialogue Canvas` 预制体作为UI界面进行更改使用。
 
 ### 4. 补充说明
-1. NPC的图片路径可在 **NPCImagesMgr** 脚本内进行更改（默认无需变更）。
-2. 对白信息路径在 **DialogueManager** 脚本内进行更改。
-3. 通过UI按钮或者按键调用 **DialogueManager.Instance.DisplayNextSentence ()** 方法即可阅读对白中的下一句对白。
-4. **DialogueManager.Instance.StartDialogue(Dialogue dialogue)** 是用来调出UI界面并且将对白数据读入的。
-5. UI界面的子物体要求请阅读 **EventDialogueUI** 脚本的注释。  
-6. 通过修改 **EventDialogueUI** 脚本的 **SetDialogue** 和 **EndDialogue** 方法内容来切换动画播放。  
-7. 可以参考 **CLX Toolkit/Super Dialogue/Main** 场景进行学习。
+1. NPC的图片路径可在 `NPCImagesMgr` 脚本内进行更改（默认无需变更）。
+2. 对白信息路径在 `DialogueManager` 脚本内进行更改。
+3. 通过UI按钮或者按键调用 `DialogueManager.Instance.DisplayNextSentence ()` 方法即可阅读对白中的下一句对白。
+4. `DialogueManager.Instance.StartDialogue(Dialogue dialogue)` 是用来调出UI界面并且将对白数据读入的。
+5. UI界面的子物体要求请阅读 `EventDialogueUI` 脚本的注释。  
+6. 通过修改 `EventDialogueUI` 脚本的 `SetDialogue` 和 `EndDialogue` 方法内容来切换动画播放。  
+7. 可以参考 `CLX Toolkit/Super Dialogue/Main` 场景进行学习。
