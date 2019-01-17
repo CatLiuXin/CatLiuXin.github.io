@@ -29,7 +29,7 @@ tags:
 + 根据XML文件中的信息对数据进行读取通过UI输出  
 + 文本显示与图案显示  
 + 效果示意图  
-![效果示意图](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-001/sample.png)
+![效果示意图](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-001/sample.gif)
 
 ### 3. 使用方法
 1. 若要引入新角色（人物或者物品），则将其图案放在默认为 `Resources/Images/NPC` 文件夹内，并且请在 `NPCEnumMgr` 添加属于该角色的 `NPC_TYPE` 枚举，并且注意该枚举类型名即该角色的名称，图案和文本都要使用此处枚举的名字，否则会出错。
