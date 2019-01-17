@@ -46,19 +46,7 @@ public enum NPC_TYPE
 2. 若要添加新剧情，请在 `Resources/Text/Dialogue/` 路径下进行添加XML文件，在 `Dialogs/Dialog` 的 `name` 结点内添加该角色的名称，也就是之前所说的添加的那个枚举。在 `Dialogs/Dialog` 的 `info` 结点内添加他说的话的文本，注意不要过长。  
 ![添加XML文件](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-001/sample_text.png)  
 XML文件内容示例：  
-```xml  
-<?xml version="1.0" encoding="utf-8"?>
-<Dialogs>
-  <Dialog>
-    <name>Box</name>
-    <info>你很危险啊，小火鸡！</info>
-  </Dialog>
-  <Dialog>
-    <name>Player</name>
-    <info>怎么样？怕不怕？</info>
-  </Dialog>
-</Dialogs>
-```  
+![XML内容](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-001/sample_xml.png)
 
 3. 在你要写的NPC的类里添加一个 `Dialogue` 变量，并且将此处对白对应的相对 `Resources/Text/Dialogue/`  的路径赋值给这个变量的 `event_name` 成员。
 
