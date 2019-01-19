@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      2019-1-17-CLX工具库（一）Unity对话系统工具SuperDialogue
+title:      CLX工具库（一）Unity对话系统工具SuperDialogue
 subtitle:   CLX Toolkit SuperDialogue
 date:       2019-1-17
 author:     BY LX
@@ -22,7 +22,7 @@ tags:
 ## 正文  
 ### 1. 前言  
 
-本工具为了实现一个简易NPC对话系统，为尽量便捷开发者工作而设计。本想使用现成工具，然而因为部分原因，最终还是选择了自己搭建。虽然说自己搭建，但是对白的核心逻辑仍是参考了大佬的，附上我参考的视频： [How to make a Dialogue System in Unity](https://www.youtube.com/watch?v=_nRzoTzeyxU)，在此对大佬表示感激与崇敬。附上我的代码链接 [Super Dialogue](https://github.com/CatLiuXin/Super-Dialogue-0.1v)。  
+本工具为了实现一个简易NPC对话系统，为尽量便捷开发者工作而设计。本想使用现成工具，然而因为部分原因，最终还是选择了自己搭建。虽然说自己搭建，但是对白的核心逻辑仍是参考了大佬的，附上我参考的视频： [How to make a Dialogue System in Unity](https://www.youtube.com/watch?v=_nRzoTzeyxU)，在此对大佬表示感激与崇敬。附上我的代码链接 [Super Dialogue](https://github.com/CatLiuXin/Super-Dialogue)。  
 
 ### 2. 功能简介  
 + 从指定文件夹中读取XML文件读取文本信息  
