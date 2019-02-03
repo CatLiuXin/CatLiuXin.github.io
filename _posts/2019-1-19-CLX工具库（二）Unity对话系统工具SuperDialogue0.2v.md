@@ -18,7 +18,7 @@ tags:
 >##### 界面
 >##### 使用方法  
 
-<p>https://music.163.com/song?id=757567&userid=548336541</p>
+<p>https://github.com/CatLiuXin/CatLiuXin.github.io/blob/master/bgm/1967.mp3</p>
 
 ## 正文  
 ### 1. 前言  
