@@ -18,7 +18,7 @@ tags:
 >##### 界面
 >##### 使用方法  
 
-<p>https://music.163.com/song?id=757567&userid=548336541.mp3</p>
+<p>http://pmgnzie4l.bkt.clouddn.com/music/%E3%82%B4%E3%83%B3%E3%83%81%E3%83%81%20-%201967.mp3</p>
 
 ## 正文  
 ### 1. 前言  
