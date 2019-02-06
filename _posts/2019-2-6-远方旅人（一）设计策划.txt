@@ -4,7 +4,7 @@ title:      远方旅人（一）设计策划
 subtitle:   Design Planning
 date:       2019-2-6
 author:     BY LX
-header-img: img/blog-003/bg.jpg
+header-img: img/blog-003/bg.png
 catalog: true
 tags:
     - 远方旅人
