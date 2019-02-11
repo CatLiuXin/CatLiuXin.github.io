@@ -39,6 +39,7 @@ tags:
 1) 对白事件系统（Dialogue Event System）  
 * 在工程中，我们接入某些对话的时候，可能会想在对白执行前、每句对白执行时、对白执行后触发某些事件。  
 为此对 `Dialogue` 类开放了一个 `RegisterAction(DIALOGUE_EVENT type, Action action)` 接口。其中 `DIALOGUE_EVENT` 是一个枚举类型如下：  
+
 ```csharp
 public enum DIALOGUE_EVENT
 {
@@ -52,7 +53,8 @@ public enum DIALOGUE_EVENT
 1. 对白执行前：禁用启用对白按钮，输出 “Dialogue Begin!”
 2. 每句对白执行时：输出 “Dialogue Step”  
 3. 对白执行后：输出“Dialogue End!” ，启用对白按钮。  
-具体代码如下：
+具体代码如下：  
+
 ```csharp
 using UnityEngine;
 using CLX;/// Dilogue的命名空间
@@ -103,7 +105,8 @@ namespace DialogueGuidance {
 
     }
 }
-```
+```  
+
 * 效果如下所示：  
 1. 启用前：  
 ![启用前](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-004/pic01.png)
@@ -119,7 +122,8 @@ namespace DialogueGuidance {
 
 2) 特殊对白解析系统
 * 在开发各种各样的对白的时候，有部分对白会想不仅包括纯文本的信息，而是通过解析那些文本得到一些对应的信息，处理这些信息来得到想要的结果。
-例如：当我们希望通过读取Dialogue信息时，去让我们对白的颜色根据信息的不同而变化。为了实现这类功能，添加了一个 `SpecialEvent` 委托类型，其代码如下：
+例如：当我们希望通过读取Dialogue信息时，去让我们对白的颜色根据信息的不同而变化。为了实现这类功能，添加了一个 `SpecialEvent` 委托类型，其代码如下：  
+
 ```csharp
     /// <summary>
     /// 特殊文本转换成对白
@@ -129,10 +133,12 @@ namespace DialogueGuidance {
     /// <param name="sText"></param>
     /// <returns></returns>
     public delegate System.Action SpecialEvent(string text,out string sText);
-```
+```  
+
 * 另外，对DialogueManager的 `StartDialogue` 函数也进行了更改，现在其签名为 `public void StartDialogue(Dialogue dialogue,bool isSpecial = false,SpecialEvent sEvent = null)` ，当要使用特殊对白解析系统时，请保证写一个 SpecialEvent 类型的委托，
 然后传参调用 StartDialogue 方法即可。  
 示例代码如下：  
+
 ```csharp
 using CLX;
 using UnityEngine.UI;
@@ -228,7 +234,7 @@ namespace DialogueGuidance
     <info>我假装没有颜色</info>
   </Dialogue>
 </Dialogues>
-```
+```  
 
 * 点击对白按钮，对白按钮被禁用，对白颜色变成红色。  
 ![Red](https://raw.githubusercontent.com/CatLiuXin/CatLiuXin.github.io/master/img/blog-004/pic08.png)
