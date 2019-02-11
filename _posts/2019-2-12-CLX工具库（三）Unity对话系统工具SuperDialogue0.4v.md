@@ -4,7 +4,7 @@ title:      CLX工具库（三）Unity对话系统工具SuperDialogue 0.4v
 subtitle:   CLX Toolkit SuperDialogue 0.4v
 date:       2019-2-12
 author:     BY LX
-header-img: img/blog-004/bg.jpg
+header-img: img/blog-004/bg.png
 catalog: true
 tags:
     - Toolkit
